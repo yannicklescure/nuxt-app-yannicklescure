@@ -43,9 +43,6 @@ export default {
     ]
   ],
 
-  // fontawesome: {
-  // },
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
@@ -54,5 +51,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  }
+
+  // https://pwa.nuxtjs.org/manifest
+  pwa: {
+    manifest: {
+      name: 'Yannick Lescure',
+      lang: 'fr',
+      useWebmanifestExtension: false
+    }
   }
 }
