@@ -5,6 +5,10 @@ body, main {
   background-color: #f8f9fa;
 }
 
+.container, .main {
+  min-height: 100vh;
+}
+
 .card {
   background-color: #212529;
 }
@@ -24,13 +28,14 @@ body, main {
 .icon-18 { font-size: 18px; }
 .icon-24 { font-size: 24px; }
 .icon-32 { font-size: 32px; }
+.icon-48 { font-size: 48px; }
+.icon-96 { font-size: 96px; }
 
 * {
   font-family: 'Roboto', sans-serif;
 }
 
-.fab, .far {
-  font-size: 24px;
+.fab, .far, .fas {
   color: #212529;
 }
 
