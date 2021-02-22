@@ -20,6 +20,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -31,7 +32,18 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // https://github.com/nuxt-community/fontawesome-module
+    ['@nuxtjs/fontawesome', {
+        icons: {
+          brands: ['faTwitter', 'faInstagram', 'faYoutube'],
+          solid: ['faEnvelope'],
+        }
+      }
+    ]
   ],
+
+  // fontawesome: {
+  // },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
