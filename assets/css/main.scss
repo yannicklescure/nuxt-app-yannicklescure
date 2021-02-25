@@ -13,8 +13,20 @@ body, main {
   background-color: #212529;
 }
 
-.card:hover {
-  background-color: #343a40;
+.card-1:hover {
+  background-color: #c9cad9;
+}
+
+.card-2:hover {
+  background-color: #d1d2f9;
+}
+
+.card-3:hover {
+  background-color: #a3bcf9;
+}
+
+.card-4:hover {
+  background-color: #7796cb;
 }
 
 .card a {
@@ -22,7 +34,8 @@ body, main {
 }
 
 .card a:hover {
-  color: #f8f9fa;
+  color: #212529;
+  // color: #f8f9fa;
 }
 
 .icon-18 { font-size: 18px; }

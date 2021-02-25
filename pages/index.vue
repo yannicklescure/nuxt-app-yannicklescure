@@ -6,22 +6,11 @@
           <img src="/profile_avatar.jpg" width="96" height="96" alt="yannick lescure" class="my-2 rounded-circle">
           <div class="my-2 text-dark">@yannicklescure</div>
         </div>
-        <div ref="buttons" class="d-flex flex-column align-items-center">
-          <div class="card w-100 my-2">
-            <div class="card-body text-center">
-              <a href="https://www.cuisinierrebelle.com/u/yannicklescure" target="_blank" class="p-2 stretched-link text-decoration-none">Aller voir mes recettes ! :)</a>
-            </div>
-          </div>
-          <div class="card w-100 my-2">
-            <div class="card-body text-center">
-              <a href="mailto:contact@yannicklescure.com" target="_blank" class="p-2 stretched-link text-decoration-none">Me contacter par courriel</a>
-            </div>
-          </div>
-          <div class="card w-100 my-2">
-            <div class="card-body text-center">
-              <a href="https://paypal.me/yannicklescure" target="_blank" class="p-2 stretched-link text-decoration-none">Faire un don</a>
-            </div>
-          </div>
+        <div ref="cards" class="d-flex flex-column align-items-center">
+          <Card :item="card1" />
+          <Card :item="card2" />
+          <Card :item="card3" />
+          <Card :item="card4" />
         </div>
         <div ref="links" class="d-flex justify-content-between align-items-center py-3">
           <a href="https://twitter.com/yannicklescure" target="_blank" class="text-body">
@@ -44,13 +33,43 @@
 
 <script>
 export default {
+  name: 'Index',
   computed: {
     containerHeight () {
-      return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      // return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      return document.documentElement.clientHeight || document.body.clientHeight;
     },
-    buttonsWidth () {
-      return this.$refs.buttons.clientWidth - 16
-    }
+    cardsWidth () {
+      return this.$refs.cards.clientWidth - 16
+    },
+    card1 () {
+      return {
+        name: 'card-1',
+        url: 'https://www.cuisinierrebelle.com/u/yannicklescure',
+        content: 'Aller voir mes recettes ! :)'
+      }
+    },
+    card2 () {
+      return {
+        name: 'card-2',
+        url: 'mailto:contact@yannicklescure.com',
+        content: 'Me contacter par courriel'
+      }
+    },
+    card3 () {
+      return {
+        name: 'card-3',
+        url: 'https://t.me/yannicklescure',
+        content: 'Message privé sur Telegram ...'
+      }
+    },
+    card4 () {
+      return {
+        name: 'card-4',
+        url: 'https://paypal.me/yannicklescure',
+        content: 'Faire un don'
+      }
+    },
   },
   // methods: {
     // setDOMScale () {
@@ -58,7 +77,7 @@ export default {
   // },
   mounted () {
     this.$refs.main.style.height = `${ this.containerHeight }px`;
-    this.$refs.links.style.width = `${ this.buttonsWidth }px`;
+    this.$refs.links.style.width = `${ this.cardsWidth }px`;
   },
 }
 </script>
