@@ -10,23 +10,27 @@ body, main {
 }
 
 .card {
-  background-color: #212529;
+  background-color: #292b2c;
 }
 
 .card-1:hover {
   background-color: #c9cad9;
+  border-color: #c9cad9;
 }
 
 .card-2:hover {
-  background-color: #d1d2f9;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
 }
 
 .card-3:hover {
-  background-color: #a3bcf9;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
 }
 
 .card-4:hover {
-  background-color: #7796cb;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
 }
 
 .card a {
@@ -34,7 +38,7 @@ body, main {
 }
 
 .card a:hover {
-  color: #212529;
+  color: #292b2c;
   // color: #f8f9fa;
 }
 
@@ -49,8 +53,13 @@ body, main {
 }
 
 .fab, .far, .fas {
-  color: #212529;
+  color: #292b2c;
 }
+
+.fa-twitter:hover { color: #2c9bea; }
+.fa-youtube:hover { color: #ff0000; }
+.fa-instagram:hover { color: #8a3ab9; }
+.fa-envelope:hover { color: #5cb85c; }
 
 @media print {
   .border,
